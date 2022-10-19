@@ -2,30 +2,35 @@ let data = new Date();
 let diaSemana = data.getDay();
 let diaSemanaTexto;
 
-    switch(diaSemana){
+function getDiaSemanaTexto(diaSemana) {
+    let diaSemanaTexto;
+    switch (diaSemana) {
         case 0:
-            diaSemanaTexto = 'Domingo';
-            break;
+            diaSemanaTexto = 'Domingo'
+            return diaSemanaTexto;
         case 1:
-            diaSemanaTexto = 'Segunda';
-            break;
+            diaSemanaTexto = 'Segunda-feira'
+            return diaSemanaTexto;
         case 2:
-            diaSemanaTexto = 'Terça';
-            break;
+            diaSemanaTexto = 'Terça-feira'
+            return diaSemanaTexto;
         case 3:
-            diaSemanaTexto = 'Quarta';
-            break;
-         case 4:
-            diaSemanaTexto = 'quinta';
-            break;
-         case 5:
-            diaSemanaTexto = 'Sexta';
-            break;
+            diaSemanaTexto = 'Quarta-feira'
+            return diaSemanaTexto;
+        case 4:
+            diaSemanaTexto = 'Quinta-feira'
+            return diaSemanaTexto;
+        case 5:
+            diaSemanaTexto = 'Sexta-feira'
+            return diaSemanaTexto;
         case 6:
-            diaSemanaTexto = 'Sabado';
-            break;
+            diaSemanaTexto = 'Sabado'
+            return diaSemanaTexto;
         default:
-            diaSemanaTexto = '';
+            diaSemanaTexto = ''
+            return diaSemanaTexto;
     }
-    console.log(diaSemana + 1, diaSemanaTexto);
+}
+
+console.log(diaSemana + 1, getDiaSemanaTexto(data.getDay()));
 // o domingo vale como 0 no JavaScript.
